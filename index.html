@@ -7,16 +7,22 @@
     <script>
       $(function() {
         $('.square').animate({
+          // 右に移動 
           'marginLeft': '600px'
         }, 2000).animate({
+          // 下に移動
           'marginTop' : '600px'
         }, 1000).animate({
+          // 上に戻る
           'marginTop' : '200px'
         }, 2000).animate({
+          // 左に戻る
           'marginLeft' : '200px'
         }, 1000).animate({
+          // 右に移動
           'marginLeft': '400px'
         }).animate({zIndex:1},{
+          // 反時計回りに一回転
           duration:1000,
           step:function(now){
             $(this).css({transform:'rotate(' + (now * -360) + 'deg)'});
@@ -24,6 +30,18 @@
           complete:function(){
             $('.square').css('zIndex', 0);
           }
+        }).animate({zIndex:1},{
+          // 時計周りに一回転
+          duration:1000,
+          step:function(now){
+            $(this).css({transform:'rotate(' + (now * 360) + 'deg)'});
+          },
+          complete:function(){
+            $('.square').css('zIndex', 0);
+          }
+        }).animate({
+          // 拡大縮小のため少し下に移動
+          'marginTop': '400px'
         })
       });
     </script>
