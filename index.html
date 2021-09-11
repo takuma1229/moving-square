@@ -14,7 +14,17 @@
           'marginTop' : '200px'
         }, 2000).animate({
           'marginLeft' : '200px'
-        }, 1000)
+        }, 1000).animate({
+          'marginLeft': '400px'
+        }).animate({zIndex:1},{
+          duration:1000,
+          step:function(now){
+            $(this).css({transform:'rotate(' + (now * -360) + 'deg)'});
+          },
+          complete:function(){
+            $('.square').css('zIndex', 0);
+          }
+        })
       });
     </script>
   </head>
