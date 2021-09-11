@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Moving Square</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+        $('.square').animate({
+          'marginLeft': '600px'
+        }, 2000).animate({
+          'marginLeft' : '200px'
+        }, 1000).css({
+          transform: "rotate(0deg)"
+        });
+        
+      });
+    </script>
+  </head>
+  <body>
+    <div class="square"></div>
+  </body>
+</html>
