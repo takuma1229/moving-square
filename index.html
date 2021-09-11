@@ -42,7 +42,26 @@
         }).animate({
           // 拡大縮小のため少し下に移動
           'marginTop': '400px'
+        }).animate({
+          // 同じアスペクト比で拡大
+          'width' : "1000px", 'height' : '400px'
+        }, 2000).animate({
+          // 同じアスペクト比で縮小
+          "width" : "250px", "height" : "100px"
+        }, 2000).animate({
+          // 元の大きさに戻す
+          "width" : "500px", "height" : "200px"
+        }, 2000).animate({
+          // 横幅だけ拡大
+          "width" : "600px"
+        }, 1000).animate({
+          "width" : "500px"
+        }, 1000).animate({
+          "height": "300px"
+        }, 1000).animate({
+          "height" : "200px"
         })
+          
       });
     </script>
   </head>
